@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  background-color: #f6efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #3b2f36;
+  line-height: 1.6;
+}
+
+/* PORTADA */
+.portada {
+  background: linear-gradient(135deg, #c96f86, #8e5a9b);
+  color: white;
+  text-align: center;
+  padding: 50px 16px 40px;
+}
+
+.portada h1 {
+  margin: 10px 0;
+  font-size: 42px;
+}
+
+.portada .pequeno {
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.portada .frase {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* MENÚ */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #fff8f3;
+  border-bottom: 1px solid #e6d5cc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.pestana {
+  background: none;
+  border: 1px solid #d9bfc8;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #6b4a5c;
+  cursor: pointer;
+}
+
+.pestana.activa {
+  background-color: #c96f86;
+  border-color: #c96f86;
+  color: white;
+}
+
+/* VISTAS */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.vista {
+  display: none;
+}
+
+.vista.activa {
+  display: block;
+}
+
+.oculto {
+  display: none;
+}
+
+/* HOJA DEL LIBRO */
+.hoja {
+  background-color: #fffdfb;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(110, 70, 90, 0.12);
+  border-left: 6px solid #e8b4c2;
+}
+
+h2, h3 {
+  color: #8e5a9b;
+}
+
+.cabecera-etapa {
+  background-color: #f7e6ec;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.cabecera-etapa h2 {
+  margin: 0 0 6px;
+}
+
+.cabecera-etapa p {
+  margin: 4px 0;
+}
+
+/* FORMULARIO */
+form label,
+fieldset {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #6b4a5c;
+}
+
+fieldset {
+  border: 1px dashed #d9bfc8;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #e0cdd4;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #fffaf7;
+  color: #3b2f36;
+}
+
+.valoro {
+  margin-bottom: 8px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #c96f86;
+}
+
+.emociones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+
+.emocion {
+  border: 1px solid #d9bfc8;
+  background-color: white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.emocion.elegida {
+  background-color: #8e5a9b;
+  border-color: #8e5a9b;
+  color: white;
+}
+
+.boton {
+  background-color: #c96f86;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #b25c74;
+}
+
+.boton.secundario {
+  background-color: #8e5a9b;
+  font-size: 15px;
+}
+
+/* ACOMPAÑAMIENTO */
+.acompanamiento {
+  border-left-color: #8e5a9b;
+}
+
+.acompanamiento .bloque {
+  margin-bottom: 18px;
+}
+
+.acompanamiento .cita {
+  background-color: #f7e6ec;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-style: italic;
+}
+
+.alerta {
+  background-color: #fde8e8;
+  border: 2px solid #d9534f;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+/* ETAPAS */
+.etapa {
+  border: 1px solid #ecdbe1;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.etapa.actual {
+  border: 2px solid #c96f86;
+  background-color: #fff5f8;
+}
+
+.etapa h3 {
+  margin: 0 0 6px;
+}
+
+.barra {
+  height: 8px;
+  background-color: #f0e2e7;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.barra div {
+  height: 100%;
+  background-color: #c96f86;
+}
+
+/* DIARIO */
+.resumen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dato {
+  flex: 1;
+  min-width: 140px;
+  background-color: #f7e6ec;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.dato strong {
+  display: block;
+  font-size: 28px;
+  color: #8e5a9b;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pagina {
+  border-top: 1px solid #ecdbe1;
+  padding: 14px 0;
+}
+
+.pagina summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #6b4a5c;
+}
+
+.pagina p {
+  margin: 6px 0;
+}
+
+.borrar {
+  background: none;
+  border: none;
+  color: #b25c74;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #8a7480;
+  padding: 20px 16px 40px;
+}
+
+@media (max-width: 500px) {
+  .portada h1 {
+    font-size: 30px;
+  }
+
+  .hoja {
+    padding: 18px;
+  }
+}
+
+@media print {
+  .menu, .acciones, footer, .borrar, #vista-hoy, #vista-etapas, #vista-ayuda {
+    display: none !important;
+  }
+
+  #vista-diario {
+    display: block !important;
+  }
+
+  .pagina details {
+    display: block;
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Libro de Amor Propio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- PORTADA -->
+    <header class="portada">
+      <p class="pequeno">Un rito diario para volver a mí</p>
+      <h1>Mi Libro de Amor Propio</h1>
+      <p class="frase">"Lo que riegas, florece. Hoy me riego a mí."</p>
+    </header>
+
+    <!-- MENÚ -->
+    <nav class="menu">
+      <button class="pestana activa" data-vista="vista-hoy">📝 Página de hoy</button>
+      <button class="pestana" data-vista="vista-etapas">🌱 Etapas</button>
+      <button class="pestana" data-vista="vista-diario">📖 Mi diario</button>
+      <button class="pestana" data-vista="vista-ayuda">🤍 Si necesito apoyo</button>
+    </nav>
+
+    <main>
+
+      <!-- PÁGINA DE HOY -->
+      <section id="vista-hoy" class="vista activa">
+        <div class="hoja">
+          <div class="cabecera-etapa" id="cabecera-etapa"></div>
+
+          <form id="formulario">
+            <label>Fecha
+              <input type="date" id="fecha" required>
+            </label>
+
+            <fieldset>
+              <legend>1. ¿Cómo me siento hoy?</legend>
+              <div class="emociones" id="emociones"></div>
+              <label>Intensidad de lo que siento: <strong id="intensidad-valor">5</strong>/10
+                <input type="range" id="intensidad" min="1" max="10" value="5">
+              </label>
+            </fieldset>
+
+            <label>2. ¿Qué estoy viviendo hoy? (lo que pasó, lo que me preocupa)
+              <textarea id="vivencia" rows="4" placeholder="Escribe sin juzgarte. Aquí todo está permitido."></textarea>
+            </label>
+
+            <label>3. <span id="pregunta-etapa">Reflexión de la etapa</span>
+              <textarea id="reflexion" rows="4"></textarea>
+            </label>
+
+            <label>4. ¿Qué he aprendido de mí hoy?
+              <textarea id="aprendido" rows="3" placeholder="Un descubrimiento, por pequeño que sea."></textarea>
+            </label>
+
+            <label>5. ¿Qué me falta? ¿Qué quiero mejorar?
+              <textarea id="falta" rows="3" placeholder="Sin castigo: solo con curiosidad."></textarea>
+            </label>
+
+            <fieldset>
+              <legend>6. Tres cosas que valoro de mí hoy</legend>
+              <input type="text" class="valoro" placeholder="1.">
+              <input type="text" class="valoro" placeholder="2.">
+              <input type="text" class="valoro" placeholder="3.">
+            </fieldset>
+
+            <label>7. Mi afirmación del día
+              <input type="text" id="afirmacion">
+            </label>
+
+            <label>8. Un pequeño acto de amor propio que haré mañana
+              <input type="text" id="acto" placeholder="Ej: tomar agua, caminar 10 minutos, decir que no a algo.">
+            </label>
+
+            <button type="submit" class="boton">Guardar mi página y recibir acompañamiento</button>
+          </form>
+        </div>
+
+        <!-- RESPUESTA DE ACOMPAÑAMIENTO -->
+        <div class="hoja acompanamiento oculto" id="acompanamiento"></div>
+      </section>
+
+      <!-- ETAPAS -->
+      <section id="vista-etapas" class="vista">
+        <div class="hoja">
+          <h2>Las 7 etapas del camino</h2>
+          <p>Cada etapa dura lo que tú necesites. Te sugiero al menos 7 páginas (días) en cada una antes de avanzar. Puedes volver a una etapa cuando quieras: el amor propio no es una línea recta, es una espiral.</p>
+          <div id="lista-etapas"></div>
+        </div>
+      </section>
+
+      <!-- DIARIO -->
+      <section id="vista-diario" class="vista">
+        <div class="hoja">
+          <h2>Mi diario</h2>
+          <div class="resumen" id="resumen"></div>
+          <div class="acciones">
+            <button class="boton secundario" id="exportar">⬇️ Descargar mi diario</button>
+            <button class="boton secundario" onclick="window.print()">🖨️ Imprimir</button>
+          </div>
+          <div id="lista-paginas"></div>
+        </div>
+      </section>
+
+      <!-- APOYO -->
+      <section id="vista-ayuda" class="vista">
+        <div class="hoja">
+          <h2>Si necesito apoyo</h2>
+          <p>Este libro es un acompañamiento para tu crecimiento, pero <strong>no reemplaza a un psicólogo o psicóloga</strong>. Pedir ayuda también es un acto de amor propio.</p>
+          <p>Si sientes que no puedes más, que quieres hacerte daño o que la vida no vale la pena, por favor habla hoy mismo con alguien:</p>
+          <ul>
+            <li><strong>Colombia:</strong> Línea 106 (Bogotá) o 192 opción 4 (salud mental)</li>
+            <li><strong>México:</strong> Línea de la Vida 800 911 2000</li>
+            <li><strong>España:</strong> 024 (Línea de atención a la conducta suicida)</li>
+            <li><strong>Argentina:</strong> 135 (CABA y GBA) o (011) 5275-1135</li>
+            <li><strong>Cualquier país:</strong> el número de emergencias local (112 / 911 / 123)</li>
+          </ul>
+          <h3>Ejercicio rápido para momentos difíciles (5-4-3-2-1)</h3>
+          <p>Respira lento. Nombra <strong>5</strong> cosas que ves, <strong>4</strong> que puedes tocar, <strong>3</strong> que escuchas, <strong>2</strong> que hueles y <strong>1</strong> que saboreas. Esto le recuerda a tu cuerpo que, en este momento, estás a salvo.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Tus páginas se guardan solo en este navegador. Nadie más las lee. 🤍</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
